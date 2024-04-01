@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'nombre';
+    src: url(fonts/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);
+}
+@font-face {
+    font-family: 'precios';
+    src: url(fonts/Outfit_Complete/Fonts/OTF/Outfit-Regular.otf);
+}
+@font-face {
+    font-family: 'botonCarrito';
+    src: url(fonts/Roundo_Complete/Fonts/OTF/Roundo-Regular.otf);
+}
+/*APARTE*/
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.precioProduct{
+    font-size: 1.10em;
+    font-family: 'precios';
+    font-weight: 800;
+    color: #000000;
+}
+.nameProduct{
+    font-family: 'precios';
+    font-weight: 100;
+    font-size: 1.2em;
+}
+.btnProduct{
+    font-family: 'botonCarrito';
+    font-weight: 800;
+    font-size: 1em;
+}
+body{
+    background-color: rgba(245, 245, 245, 0.972);
+}
+
+header{
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 1em 0 1em 0;
+    max-height: 200px;
+    border-bottom: 1px solid;
+}
+
+.Logo{
+    margin: auto;
+   width: 80%;
+   min-width: 180px;
+   max-width: 250px;
+   height: auto;
+    text-align: center;
+}
+.containerMenu{
+    background-color: #49494930;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 1em auto;
+    width: 100%; 
+}
+.containerMenu > ol{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.containerMenu ol > li{
+    padding: 3px 5px 3px 5px;
+    border-radius: 10px;
+}
+.seach{
+    display: flex;
+    margin: 5px auto;
+}
+.seach > input{
+    border: none;
+    outline: none;
+    padding: 0 0 0 10px;
+    text-align: start;
+    width: 200px; height: 30px;
+}
+.seach > button{
+    cursor: pointer;
+    width: 30px;
+   border: none;
+    height: 30px;
+    margin: 0 0 0 0;
+    background-color: #ffffff;
+}
+.carrito{
+    width: 350px;
+    display: flex;
+    margin:15px auto;
+}
+.Carritocompras{
+    cursor: pointer;
+   border: none;
+    background-color: transparent;
+    transition: ease-in-out .3s;
+}
+.Carritocompras:hover{
+    transform: scale(1.1);
+}
+.Carritocompras > svg{
+width: 30px; height: auto;
+}
+
+/*PROPAGANDA carruzel*/
+.carrucel{
+    background-color: #ebe8e8;
+    margin: 12em auto;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+   display: grid;
+   grid-template-columns: repeat(4, 100%);
+   overflow-x: scroll;
+}
+.carrucel::-webkit-scrollbar{
+    display: none;
+}
+ 
+.carrucel > ul{
+    list-style: none;
+    margin: 10px;
+    height: 250px; 
+    min-height: 100px;
+    animation: muevo infinite linear 30s;
+}
+.carrucel ul > li{
+    width: 100%; height: 100%;
+}
+.carrucel ul li > img{
+    object-fit: contain;
+    width: 100%; height: 100%;
+}
+@keyframes muevo {
+    from{
+     margin-left: 0;
+    }
+    to{
+     margin-left: -400%;
+    }
+ }
+
+
+ /*productos MAIN*/
+#principal{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+.producto{
+    width: 300px; max-width: 350px;
+    height: 400px;
+    border-radius: 10px 10px 0 0;
+    margin: auto;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 10%);
+    transition: ease-in-out .3s;
+    transform-origin: bottom;
+}
+.producto:hover{
+    transform: translateY(-10px);
+    transition: ease-in-out .3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 50%);;
+}
+.productoLink{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; height: 300px;
+    background-color: rgba(202, 193, 193, 0.378);
+
+}
+.imgProducto{
+    margin: auto;
+    width: 90%; height:auto;
+    object-fit: contain;
+}
+.precioProduct{
+    position: absolute;
+    margin: .8em; padding: 0 10px 0 10px;
+    background-color: #8fff89;
+}
+.abajoProduct{
+    margin: .5em auto;
+    width: 100%; 
+    height: 80px;
+    text-align: center;
+}
+
+.nameProduct
+{
+    max-height: 30px;
+    margin: 15px 0 10px 0;
+    text-align: left;
+    padding:0 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.btnProduct{
+   width: 80%;
+   padding: 8px;
+   margin:auto;
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   background-color: rgba(14, 255, 1, 0.461);
+   cursor: pointer;
+   box-shadow: 1px 2px 1px rgba(15, 1, 1, 0.266);
+}
+
+
+.eliminar{/*boton*/
+border: solid;
+    position: absolute;
+   margin: 10px 0 0 230px;
+   width: 40px;
+   height: 40px;
+}
+
+
+/*TODO FOOTER*/
+footer{
+    margin: 3em 0 auto;
+    background-color: #ebe8e8;
+}
+.containerFooter{
+    padding: 100px 0 0 0;
+    margin:auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    gap: 15px;
+}
+.containerFooter > ol{
+    margin:10px auto;
+   text-align: left;
+    list-style: none;
+}
+
+.containerFooter ol > li{
+    transform-origin: center;
+    transition: transform ease-in-out .3s;
+    padding: 10px 0 10px 0;
+}
+.containerFooter ol > li:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+#titulito{
+    transform:none;
+}
+#titulito > span{
+    font-family: 'precios';
+    font-size: 1.5rem;
+   text-align: left;
+    color: #000000;
+}
+.containerFooter ol li > a{
+    font-family: 'botonCarrito';
+}
+.containerFooter ol li > a:hover{
+    color: var(--amarilloMostaza);
+    transition: ease-in-out .3s;
+}
+.copy{
+    text-align: center;
+    margin: 50px 0 0px 0;
+    padding: 0 0 20px 0;
+}
+.copy a{
+    transition: ease .2s; 
+}
+.copy a:hover{
+    color:#ff0000;
+    transition: ease .2s;
+}
+@media (max-width:730px) {
+    .containerMenu > ol{
+    display: none;
+    }
+    
+}
